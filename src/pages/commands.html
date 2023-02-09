@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/95647824?s=280&v=4" type="image/png" sizes="20x20">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/commands.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <meta property="og:image" content="https://user-images.githubusercontent.com/70943732/213678287-d3c9a9c9-4fa5-44e6-99d7-0976d91cdad6.png">
+    <meta name="description" content="Elpha! The Open-Source discord bot!">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Pranshu Patel">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elphabot.github.io/">
+    <meta property="og:title" content="Elpha">
+    <meta property="og:description" content="Elpha! The Open-Source discord bot!">
+    <meta property="og:image" content="https://user-images.githubusercontent.com/70943732/213678287-d3c9a9c9-4fa5-44e6-99d7-0976d91cdad6.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://elphabot.github.io/">
+    <meta property="twitter:title" content="Elpha">
+    <meta property="twitter:description" content="Elpha! The Open-Source Discord Bot!">
+    <meta property="twitter:image" content="https://user-images.githubusercontent.com/70943732/213678287-d3c9a9c9-4fa5-44e6-99d7-0976d91cdad6.png">
+    <script src="https://kit.fontawesome.com/261c6ec26e.js" crossorigin="anonymous"></script>
+    <title>Elphabot</title>
+</head>
+<body>
+    <div class="navbar navbar-expand-md bg-dark navbar-dark">
+        <div class="container">
+            <a href="../index.html" class="navbar-brand text-info">Elpha</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainmenu">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainmenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="linksdrop" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Links</a>
+                        <ul class="dropdown-menu bg-dark" aria-labelledby="linksdrop">
+                            <li><a class="dropdown-item text-muted" href="https://dsc.gg/elpha">Invite</a></li>
+                            <li><a class="dropdown-item text-muted" href="https://github.com/pranshu05/elpha">Github</a></li>
+                            <li><a class="dropdown-item text-muted" href="https://discord.gg/CVyx9qyYPF">Support Server</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <section style="margin-top: 9%;">
+            <div class="row">
+                <div class="col-sm-6 my-1">
+                    <h2 class="fw-bold">Elpha Commands</h2>
+                    <p class="command-descreption">Find all Elpha bot commands and information you need fast and easy</p>
+                </div>
+            </div>
+            <hr>
+        </section>
+        <div class="row">
+            <div class="col-md-4 my-2">
+                <div class="card p-3">
+                    <h5>Select Commands Category</h5>
+                    <hr/>
+                    <button onclick="active(this)" id="CategoryBtnAll" class="text-decoration-none btn btn-primary mt-2 my-1 p-2">All Commands</button>
+                    <button onclick="active(this)" id="CategoryBtn0" class="text-decoration-none btn btn-primary mt-2 my-1 p-2">Moderation Commands</button>
+                    <button onclick="active(this)" id="CategoryBtn1" class="text-decoration-none btn btn-primary mt-2 my-1 p-2">General Commands</button>
+                    <button onclick="active(this)" id="CategoryBtn2" class="text-decoration-none btn btn-primary mt-2 my-1 p-2">Fun Commands</button>
+                    <button onclick="active(this)" id="CategoryBtn3" class="text-decoration-none btn btn-primary mt-2 my-1 p-2">NSFW Commands</button>
+                </div>
+            </div>
+            <div class="col-md-8 my-2">
+                <input type="text" class="w-100 search-box" oninput="search(this.value)" placeholder="Search for commands" />
+                <div class="mt-4"></div>
+                    <div class="commands-section" id="Category0">
+                      <div class="accordion accordion-flush mt-2" id="ban">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fban">
+                                             /ban&nbsp; <span class="command-descreption">- ban a member</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fban" class="accordion-collapse collapse" data-bs-parent="#ban">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /ban member : @memebr reason : string<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="banned">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fbanned">
+                                             /banned&nbsp; <span class="command-descreption">- sends banned users</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fbanned" class="accordion-collapse collapse" data-bs-parent="#banned">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /banned<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="defaultrole">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fdefaultrole">
+                                             /defaultrole&nbsp; <span class="command-descreption">- sets default role</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fdefaultrole" class="accordion-collapse collapse" data-bs-parent="#defaultrole">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /setdefaultrole role : string<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="kick">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fkick">
+                                             /kick&nbsp; <span class="command-descreption">- kick a member</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fkick" class="accordion-collapse collapse" data-bs-parent="#kick">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /kick user : @memebr reason : string<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="kicked">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fkicked">
+                                             /kicked&nbsp; <span class="command-descreption">- sends kicked users</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fkicked" class="accordion-collapse collapse" data-bs-parent="#kicked">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /kicked<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="lockchannel">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#lockchannel">
+                                             /lockchannel&nbsp; <span class="command-descreption">- locks selected channel</span>
+                                        </button>
+                                    </h2>
+                                    <div id="flockchannel" class="accordion-collapse collapse" data-bs-parent="#lockchannel">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /lockchannel channel : #channel reason : string<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="lockedchannels">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#lockedchannels">
+                                             /lockedchannels&nbsp; <span class="command-descreption">- sends locked channels</span>
+                                        </button>
+                                    </h2>
+                                    <div id="flockedchannels" class="accordion-collapse collapse" data-bs-parent="#lockedchannels">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /lockedchannels<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="mute">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#mute">
+                                             /mute&nbsp; <span class="command-descreption">- mute a member</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fmute" class="accordion-collapse collapse" data-bs-parent="#mute">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /mute user : @memebr reason : string<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="muted">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fmuted">
+                                             /muted&nbsp; <span class="command-descreption">- sends muted users</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fmuted" class="accordion-collapse collapse" data-bs-parent="#muted">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /muted<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="purge">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fpurge">
+                                             /purge&nbsp; <span class="command-descreption">- purge some messages</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fpurge" class="accordion-collapse collapse" data-bs-parent="#purge">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /purge messages : integer<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="removegeneralchannel">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fremovegeneralchannel">
+                                             /removegeneralchannel&nbsp; <span class="command-descreption">- removes the general message channel</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fremovegeneralchannel" class="accordion-collapse collapse" data-bs-parent="#removegeneralchannel">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /removegeneralchannel<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="removegif">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fremovegif">
+                                             /removegif&nbsp; <span class="command-descreption">- removes any gif by name</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fremovegif" class="accordion-collapse collapse" data-bs-parent="#removegif">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /removegif name : string<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="removegoodbyechannel">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fremovegoodbyechannel">
+                                             /removegoodbyechannel&nbsp; <span class="command-descreption">- removes the goodbye channel</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fremovegoodbyechannel" class="accordion-collapse collapse" data-bs-parent="#removegoodbyechannel">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /removegoodbyechannel<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="removemodlogchannel">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fremovemodlogchannel">
+                                             /removemodlogchannel&nbsp; <span class="command-descreption">- removes the modlog channel</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fremovemodlogchannel" class="accordion-collapse collapse" data-bs-parent="#removemodlogchannel">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /removemodlogchannel<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="removewelcomechannel">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fremovewelcomechannel">
+                                             /removewelcomechannel&nbsp; <span class="command-descreption">- removes the welcome channel</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fremovewelcomechannel" class="accordion-collapse collapse" data-bs-parent="#removewelcomechannel">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /removewelcomechannel<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="setgeneralchannel">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fsetgeneralchannel">
+                                             /setgeneralchannel&nbsp; <span class="command-descreption">- sets the general message channel</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fsetgeneralchannel" class="accordion-collapse collapse" data-bs-parent="#setgeneralchannel">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /setgeneralchannel channel : #channel<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="setgoodbyechannel">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fsetgoodbyechannel">
+                                             /setgoodbyechannel&nbsp; <span class="command-descreption">- sets the goodbye message channel</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fsetgoodbyechannel" class="accordion-collapse collapse" data-bs-parent="#setgoodbyechannel">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /setgoodbyechannel channel : #channel<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="setmodlogchannel">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fsetmodlogchannel">
+                                             /setmodlogchannel&nbsp; <span class="command-descreption">- sets the modlog message channel</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fsetmodlogchannel" class="accordion-collapse collapse" data-bs-parent="#setmodlogchannel">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /setmodlogchannel channel : #channel<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="setwelcomechannel">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fsetwelcomechannel">
+                                             /setwelcomechannel&nbsp; <span class="command-descreption">- sets the welcome message channel</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fsetwelcomechannel" class="accordion-collapse collapse" data-bs-parent="#setwelcomechannel">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /setwelcomechannel channel : #channel<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="slowmode">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fslowmod">
+                                             /slowmode&nbsp; <span class="command-descreption">- sets slowmode of current channel</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fslowmode" class="accordion-collapse collapse" data-bs-parent="#slowmode">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /slowmode time : integer<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="unlockchannel">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#funlockchannel">
+                                             /unlockchannel&nbsp; <span class="command-descreption">- unlocks selected channel</span>
+                                        </button>
+                                    </h2>
+                                    <div id="funlockchannel" class="accordion-collapse collapse" data-bs-parent="#unlockchannel">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /unlockchannel channel : #channel reason : string<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="unmute">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#funmute">
+                                             /unmute&nbsp; <span class="command-descreption">- unmute a member</span>
+                                        </button>
+                                    </h2>
+                                    <div id="funmute" class="accordion-collapse collapse" data-bs-parent="#unmute">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /unmute user : @member<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="userwarning">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fuserwarning">
+                                             /userwarning&nbsp; <span class="command-descreption">- sends user's warning</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fuserwarning" class="accordion-collapse collapse" data-bs-parent="#userwarning">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /userwarning user : @memebr<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="warn">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fwarn">
+                                             /warn&nbsp; <span class="command-descreption">- warn a member</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fwarn" class="accordion-collapse collapse" data-bs-parent="#warn">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /warn user : @memebr warning : string<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="warneduser">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fwarneduser">
+                                             /warneduser&nbsp; <span class="command-descreption">- sends warned users</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fwarneduser" class="accordion-collapse collapse" data-bs-parent="#warneduser">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /warneduser<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="commands-section" id="Category1">
+                      <div class="accordion accordion-flush mt-2" id="addgif">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faddgif">
+                                             /addgif&nbsp; <span class="command-descreption">- add gif with option of name!</span>
+                                        </button>
+                                    </h2>
+                                    <div id="faddgif" class="accordion-collapse collapse" data-bs-parent="#addgif">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /addgif name : string url : string
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="anime">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fanime">
+                                             /anime&nbsp; <span class="command-descreption">- sends random anime pics</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fanime" class="accordion-collapse collapse" data-bs-parent="#anime">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /anime
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="avatar">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#favtar">
+                                             /avatar&nbsp; <span class="command-descreption">- sends user's avatar</span>
+                                        </button>
+                                    </h2>
+                                    <div id="favtar" class="accordion-collapse collapse" data-bs-parent="#avatar">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /avatar user : @member
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="botinfo">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fbotinfo">
+                                             /botinfo&nbsp; <span class="command-descreption">- Bot&#39;s info</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fbotinfo" class="accordion-collapse collapse" data-bs-parent="#botinfo">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /botinfo
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="cat">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fcat">
+                                             /cat&nbsp; <span class="command-descreption">- random cat pics</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fcat" class="accordion-collapse collapse" data-bs-parent="#cat">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /cat
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="choose">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fchoose">
+                                             /choose&nbsp; <span class="command-descreption">- Elpha will choose for u!</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fchoose" class="accordion-collapse collapse" data-bs-parent="#choose">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /choose 1st : string 2nd : string
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="covid">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fcovid">
+                                             /covid&nbsp; <span class="command-descreption">- sends covid stats of given country</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fcovid" class="accordion-collapse collapse" data-bs-parent="#covid">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /covid country : string
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="dog">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fdog">
+                                             /dog&nbsp; <span class="command-descreption">- sends random dog pics</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fdog" class="accordion-collapse collapse" data-bs-parent="#dog">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /dog
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="eatorpass">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#featorpass">
+                                             /eatorpass&nbsp; <span class="command-descreption">- sends Eat or Pass poll</span>
+                                        </button>
+                                    </h2>
+                                    <div id="featorpass" class="accordion-collapse collapse" data-bs-parent="#eatorpass">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /eatorpass
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="echo">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fecho">
+                                             /echo&nbsp; <span class="command-descreption">- echoes your message</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fecho" class="accordion-collapse collapse" data-bs-parent="#echo">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /echo message : string
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="flip">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fflip">
+                                             /flip&nbsp; <span class="command-descreption">- flip a coin</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fflip" class="accordion-collapse collapse" data-bs-parent="#flip">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /flip
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="invite">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#finvite">
+                                             /invite&nbsp; <span class="command-descreption">- sends invite link of Elpha</span>
+                                        </button>
+                                    </h2>
+                                    <div id="finvite" class="accordion-collapse collapse" data-bs-parent="#invite">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /invite
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="ping">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fping">
+                                             /ping&nbsp; <span class="command-descreption">- sends latency of Elpha</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fping" class="accordion-collapse collapse" data-bs-parent="#ping">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /ping
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="qr">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fqr">
+                                             /qr&nbsp; <span class="command-descreption">- generates QR code of provided URL</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fqr" class="accordion-collapse collapse" data-bs-parent="#qr">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /qr url : string
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="quote">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fquote">
+                                             /quote&nbsp; <span class="command-descreption">- sends random quotes</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fquote" class="accordion-collapse collapse" data-bs-parent="#quote">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /quote
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="repo">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#frepo">
+                                             /repo&nbsp; <span class="command-descreption">- sends Elpha's open-source repository's link</span>
+                                        </button>
+                                    </h2>
+                                    <div id="frepo" class="accordion-collapse collapse" data-bs-parent="#repo">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /repo
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="roll">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#froll">
+                                             /roll&nbsp; <span class="command-descreption">- roll a die</span>
+                                        </button>
+                                    </h2>
+                                    <div id="froll" class="accordion-collapse collapse" data-bs-parent="#roll">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /roll
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="serverinfo">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fserverinfo">
+                                             /serverinfo&nbsp; <span class="command-descreption">- sends server's info</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fserverinfo" class="accordion-collapse collapse" data-bs-parent="#serverinfo">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /serverinfo
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="serverinv">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fserverinv">
+                                             /serevrinv&nbsp; <span class="command-descreption">- sends current server's invite link</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fserverinv" class="accordion-collapse collapse" data-bs-parent="#serverinv">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /serverinv
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="userinfo">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fuserinfo">
+                                             /userinfo&nbsp; <span class="command-descreption">- sends selected user's info</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fuserinfo" class="accordion-collapse collapse" data-bs-parent="#userinfo">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /userinfo
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="vote">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fvote">
+                                             /vote&nbsp; <span class="command-descreption">- sends Elpha's vote links</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fvote" class="accordion-collapse collapse" data-bs-parent="#vote">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /vote
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="weather">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fweather">
+                                             /weather&nbsp; <span class="command-descreption">- sends provided location's weather</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fweather" class="accordion-collapse collapse" data-bs-parent="#weather">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /weather
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="commands-section" id="Category2">
+                       <div class="accordion accordion-flush mt-2" id="dank">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fdank">
+                                             /dank&nbsp; <span class="command-descreption">- Get your dank status </span>
+                                        </button>
+                                    </h2>
+                                    <div id="fdank" class="accordion-collapse collapse" data-bs-parent="#dank">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /dank
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       <div class="accordion accordion-flush mt-2" id="gay">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fgay">
+                                             /gay&nbsp; <span class="command-descreption">- gay someone </span>
+                                        </button>
+                                    </h2>
+                                    <div id="fgay" class="accordion-collapse collapse" data-bs-parent="#gay">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /gay user : @member
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       <div class="accordion accordion-flush mt-2" id="8ball">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f8ball">
+                                             /8ball&nbsp; <span class="command-descreption">- magic 8ball command </span>
+                                        </button>
+                                    </h2>
+                                    <div id="f8ball" class="accordion-collapse collapse" data-bs-parent="#8ball">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /8ball
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       <div class="accordion accordion-flush mt-2" id="meme">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fmeme">
+                                             /meme&nbsp; <span class="command-descreption">- sends random meme </span>
+                                        </button>
+                                    </h2>
+                                    <div id="fmeme" class="accordion-collapse collapse" data-bs-parent="#meme">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /meme
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       <div class="accordion accordion-flush mt-2" id="pp">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fpp">
+                                             /pp&nbsp; <span class="command-descreption">- Get your peepee size </span>
+                                        </button>
+                                    </h2>
+                                    <div id="fpp" class="accordion-collapse collapse" data-bs-parent="#pp">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /pp
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       <div class="accordion accordion-flush mt-2" id="roast">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#froast">
+                                             /roast&nbsp; <span class="command-descreption">- roast someone </span>
+                                        </button>
+                                    </h2>
+                                    <div id="froast" class="accordion-collapse collapse" data-bs-parent="#roast">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /roast user : @member
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                    </div>
+                    <div class="commands-section" id="Category3">
+                      <div class="accordion accordion-flush mt-2" id="nsfw">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fnsfw">
+                                             /nsfw&nbsp; <span class="command-descreption">- sends random NSFW pics </span>
+                                        </button>
+                                    </h2>
+                                    <div id="fnsfw" class="accordion-collapse collapse" data-bs-parent="#nsfw">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /nsfw
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      <div class="accordion accordion-flush mt-2" id="nsfwmeme">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fnsfwmeme">
+                                             /nsfwmeme&nbsp; <span class="command-descreption">- sends random NSFW meme </span>
+                                        </button>
+                                    </h2>
+                                    <div id="fnsfwmeme" class="accordion-collapse collapse" data-bs-parent="#nsfwmeme">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /nsfwmeme
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-clean bg-dark">
+    <footer>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-4 col-md-3 item">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="./pages/commands.html">Commands</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 item">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="https://discord.gg/CVyx9qyYPF">Support server</a></li>
+                        <li><a href="https://dsc.gg/elpha">Invite bot</a></li>
+                        <li><a href="https://github.com/pranshu05/elpha">Github Repo</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 item social">
+                  <a href="https://discord.gg/CVyx9qyYPF"><ion-icon name="logo-discord"></ion-icon></a>
+                  <a href="https://twitter.com/elpha_bot"><ion-icon name="logo-twitter"></ion-icon></a>
+                  <a href="https://github.com/elphabot"><ion-icon name="logo-github"></ion-icon></a>
+                    <p class="copyright">Elpha Bot © 2023</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/fontawesome/all.min.js"></script>
+    <script src="/js/animation.js"></script>
+    <script>
+        function active(elm){
+            document.getElementById("CategoryBtnAll").classList.remove("active");
+            
+                document.getElementById("CategoryBtn0").classList.remove("active");
+                document.getElementById("Category0").setAttribute("hidden", "");
+            
+                document.getElementById("CategoryBtn1").classList.remove("active");
+                document.getElementById("Category1").setAttribute("hidden", "");
+            
+                document.getElementById("CategoryBtn2").classList.remove("active");
+                document.getElementById("Category2").setAttribute("hidden", "");
+            
+                document.getElementById("CategoryBtn3").classList.remove("active");
+                document.getElementById("Category3").setAttribute("hidden", "");
+            
+            elm.classList.add("active");
+            if(elm.id.replace("CategoryBtn", "") == "All"){
+                
+                    document.getElementById("Category0").removeAttribute("hidden");
+                
+                    document.getElementById("Category1").removeAttribute("hidden");
+                
+                    document.getElementById("Category2").removeAttribute("hidden");
+                
+                    document.getElementById("Category3").removeAttribute("hidden");
+                
+            }else{
+                document.getElementById("Category" + elm.id.replace("CategoryBtn", "")).removeAttribute("hidden");
+            }
+        }
+        document.getElementById("CategoryBtnAll").click();
+        function search(arg){
+            let commands = JSON.parse(document.getElementById("commands").value);
+            let cmds = [];
+            commands.forEach(category => {
+                category.commands.forEach(command => {
+                    cmds.push(command);
+                })
+            })
+            let existedCmds = cmds.filter(obj => obj.includes(arg.toLowerCase()));
+            cmds.forEach(cmd => {
+                document.getElementById(cmd).setAttribute("hidden", "");
+            })
+            existedCmds.forEach(cmd => {
+                document.getElementById(cmd).removeAttribute("hidden");
+            })
+        }
+    </script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
